@@ -5,6 +5,18 @@
 
 A TypeScript package that provides common type definitions for the VizHub ecosystem. This package serves as the foundation for type safety and consistency across all VizHub projects.
 
+## Type-only package: build and verification
+
+This repository publishes `@vizhub/viz-types`, a **TypeScript type definition** package. The declarations are maintained in [`src/index.ts`](src/index.ts); inspect that file for the authoritative type names and structures.
+
+```bash
+npm ci
+npm run typecheck
+npm run build
+```
+
+Unlike runtime libraries, root `package.json` defines **no `test` script**. Do not prescribe `npm test` or imply that type-checking exercises runtime behavior. Changes to exported types should be verified against dependent packages, including [`viz-utils`](https://github.com/vizhub-studio/viz-utils).
+
 ## Overview
 
 `viz-types` is a types-only package - it exports TypeScript type definitions without any JavaScript runtime code, making it extremely lightweight. It defines the core data structures used throughout the VizHub ecosystem, ensuring type consistency across all dependent projects.
