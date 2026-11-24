@@ -1,7 +1,7 @@
 {
   "name": "@vizhub/viz-types",
   "version": "0.5.0",
-  "description": "A package for VizHub types and utilities used across packages",
+  "description": "Shared TypeScript types for the VizHub ecosystem",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:vizhub-core/viz-types.git"
+    "url": "git+https://github.com/vizhub-studio/viz-types.git"
   },
   "author": "Curran Kelleher",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vizhub-core/viz-types/issues"
+    "url": "https://github.com/vizhub-studio/viz-types/issues"
   },
-  "homepage": "https://github.com/vizhub-core/viz-types",
+  "homepage": "https://github.com/vizhub-studio/viz-types#readme",
   "devDependencies": {
     "prettier": "^3.10.1",
     "typescript": "^5.9.3"
