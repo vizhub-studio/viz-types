@@ -1,9 +1,4 @@
-import type {
-  VizChat,
-  VizChatMessageRole,
-  VizContent,
-  VizFiles,
-} from "../src";
+import type { VizChat, VizChatMessageRole, VizContent, VizFiles } from "../src";
 
 const files: VizFiles = {
   file1: { name: "index.html", text: "<body>Hello</body>" },
