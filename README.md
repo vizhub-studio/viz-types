@@ -51,18 +51,19 @@ File collection keys in `VizFiles` are stable IDs, not filenames or array indice
 
 ## Development
 
-Use Node.js 22, 24, or 26 and npm.
+Use Node.js 26 (the version CI tests) and npm.
 
 ```sh
 npm ci
 npm run format:check
+npm run lint
 npm run typecheck
 npm test
 npm run build
 npm pack --dry-run
 ```
 
-Run `npm run format` to apply formatting. Tests are compile-time contract fixtures, not runtime tests. GitHub Actions runs the checks on pull requests and pushes to main.
+Run `npm run format` to apply formatting and `npm run prettier` as an alias. Tests are compile-time contract fixtures, not runtime tests. GitHub Actions runs the checks on pull requests and pushes to main.
 
 ## Compatibility and releases
 
