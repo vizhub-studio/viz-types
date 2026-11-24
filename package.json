@@ -10,7 +10,8 @@
     "prepublishOnly": "npm run build",
     "typecheck": "tsc --noEmit",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "test": "tsc --noEmit -p tsconfig.test.json"
   },
   "repository": {
     "type": "git",

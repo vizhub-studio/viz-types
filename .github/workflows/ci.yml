@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [22, 24, 26]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm pack --dry-run
+      - name: Verify packed entry points
+        run: |
+          npm pack --json > /tmp/viz-types-pack.json
+          node -e 'const p = require("/tmp/viz-types-pack.json")[0]; for (const path of ["dist/index.js", "dist/index.d.ts"]) { if (!p.files.some(f => f.path === path)) throw new Error("Missing " + path); }'
