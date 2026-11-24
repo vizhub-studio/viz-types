@@ -25,7 +25,7 @@
   "homepage": "https://github.com/vizhub-studio/viz-types#readme",
   "devDependencies": {
     "prettier": "^3.10.1",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "publishConfig": {
     "access": "public"
