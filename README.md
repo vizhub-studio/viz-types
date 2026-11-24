@@ -51,7 +51,7 @@ File collection keys in `VizFiles` are stable IDs, not filenames or array indice
 
 ## Development
 
-Use Node.js 26 (the version CI tests) and npm.
+Use the Node.js version set in `.github/workflows/ci.yml`, and npm.
 
 ```sh
 npm ci
