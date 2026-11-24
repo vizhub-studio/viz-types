@@ -6,9 +6,11 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prettier": "prettier {*.*,**/*.*} --write",
+    "prettier": "npm run format",
     "prepublishOnly": "npm run build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,8 @@
   },
   "homepage": "https://github.com/vizhub-core/viz-types",
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "public"
